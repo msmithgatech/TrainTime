@@ -1,0 +1,111 @@
+#content {
+    background-color: lightblue;
+    font-family: Georgia, Arial, sans-serif ;
+    color: navy;
+}
+
+#pageTitl {
+    margin: 0px 10px 20px 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#twoHdrs {
+    margin: 20px 10px 20px 10px;
+    text-align: center;
+}
+
+/*.h2 {*/
+    /*padding: 5px;*/
+/*}*/
+
+/*.h4 {*/
+    /*padding: 5px;*/
+/*}*/
+
+#nuSchedules {
+    height: 600px;
+    width: 500px;
+    margin: 30px 10px 20px 50px;
+    background-color: mediumslateblue;
+    border: solid;
+    border-color: darkmagenta;
+    border-bottom-style: outset;
+}
+
+#succss {
+    height: 100px;
+    width: 250px;
+    margin: 15px;
+    text-align: center;
+    font-size: medium;
+    background-color: lightyellow;
+    display: none;
+}
+
+#EntryNT {
+    margin: 60px 35px 60px 35px;
+    padding: 10px;
+    height: 500px;
+    width:  400px;
+    border: solid;
+    border-color: black;
+}
+
+#compnyNT {
+    width: auto;
+    text-align: left;
+}
+
+#trainNT {
+    width: auto;
+    text-align: left;
+}
+
+#earlyNT {
+    width: auto;
+    text-align: left;
+}
+
+#destNT {
+    width: auto;
+    text-align: left;
+}
+
+#arvDestNT {
+    width: auto;
+    margin-left: auto;
+}
+
+.button {
+    text-align: center;
+    border-radius: 8%;
+    background-color: lightskyblue;
+    font-size: 18px;
+    color: antiquewhite;
+}
+
+.trainGallery {
+    position: relative;
+    margin: 50px 0px 20px 10px;
+    border-style: solid;
+    border-color: coral;
+    border-bottom-style: outset;
+}
+
+.tGMemo {
+    border-radius: 50%;
+    margin: auto;
+}
+
+.tGImg {
+    height: 133px;
+    width: 200px;
+    border-radius: 4%;
+    margin: auto;
+}
+
+#dspScheds {
+
+
+}

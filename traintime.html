@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Time All Aboard</title>
+          <!-- Added link to the jQuery library -->
+    <script href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+
+          <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+          <!-- Local CSS File-->
+    <link href="assets/css/style.css" rel='stylesheet'>
+
+</head>
+<body>
+
+
+<div id="content">
+           <!--  The page is divided into 3 ROWs:  -->
+           <!--  LEFT COLUMN 5 and RIGHT COLUMN 7  -->
+           <!--  Everything on the LEFT is data entry  -->
+           <!--  The RIGHT will be used for display  -->
+   <div id="row">
+      <div class="column col-xs-5 col-sm-5 col-md-5 topLft">
+         <div id="pageTitl">
+            <h2>Train Schedules All Aboard</h2>
+         </div>
+         <div id="twoHdrs">
+            <h5>Add Train Schedules Below</h5>
+            <h5>View Train Schedules on the right</h5>
+         </div>
+         <div id="succss">Add Successful TOOT-TOOT!</div>
+         <div id="nuSchedules">
+            <div id="EntryNT">
+               <form>
+                  <div class="form-group">
+                     <label for="compnyNT">Railroad Co:</label>
+                     <input type="text" id="compnyNT">
+                  </div>
+                  <div class="form-group">
+                     <label for="trainNT">Train:</label>
+                     <input type="text" id="trainNT">
+                  </div>
+                  <div class="form-group">
+                      <label for="earlyNT">Earliest Train:</label>
+                      <input type="text" id="earlyNT">
+                  </div>
+                  <div class="form-group">
+                     <label for="destNT">Destination City:</label>
+                     <input type="text" id="destNT">
+                  </div>
+                  <div class="form-group">
+                      <label for="arvDestNT">Arrival at Destination:</label>
+                      <input type="text" id="arvDestNT">
+                  </div>
+                  <button type="submit" class="btn btn-btn-md">SUBMIT</button>
+               </form>
+            </div>     <!--  END ENTRYNT DIV  -->
+         </div>     <!--  END OUTER DIV FOR NEW SCHEDULES  -->
+      </div>
+           <!-- RIGHTHAND SIDE OF THE PAGE  -->
+           <!-- DECORATIVE BANNER ACROSS THE TOP  -->
+       <div class="column col-xs-7 col-sm-7 col-md-7 topRgt">
+         <div  id="trainGallery">
+            <div class="form-group">
+               <img class="tGMemo" src="assets/images/pexels-trainMemorial.jpeg">
+               <img class="tGImg" src="assets/images/pexels-blutrain.jpg">
+               <img class="tGImg" src="assets/images/pexels-toyTrain.jpeg">
+               <img class="tGImg" src="assets/images/pexels-trainStation.jpeg">
+               <img class="tGImg" src="assets/images/pexels-niteTrain.jpeg">
+               <img class="tGMemo" src="assets/images/pexels-trainMemorial.jpeg">
+            </div>
+         </div>
+
+         <div id="ExistsNT">
+         </div>
+            <!--<form class="form-inline">-->
+               <!--<div class="form-group">-->
+                  <!--<div id="trnSchedules">-->
+                     <!--<label for="tsTrain">Train</label>-->
+                     <!--<label for="tsDest">Destination</label>-->
+                     <!--<label for="tsDestArv">Arrival Time</label>-->
+                     <!--<label for="tsNxtArv">Next Arrival Time</label>-->
+                    <!--<label>Next Arrival Time</label>-->
+                  <!--</div>-->
+
+                   <!--<div class="list-group">-->
+                       <!--<a href="#" class="list-group-item">-->
+                           <!--<h4 class="list-group-item-heading">Train</h4>-->
+                           <!--<p class="list-group-item-text tsTrain"></p>-->
+                       <!--</a>-->
+                       <!--<a href="#" class="list-group-item">-->
+                           <!--<h4 class="list-group-item-heading">Destination</h4>-->
+                          <!--/<p class="list-group-item-text tsDest"></p>-->
+                       <!--</a>-->
+                       <!--<a href="#" class="list-group-item">-->
+                           <!--<h4 class="list-group-item-heading">Arrival TIme</h4>-->
+                           <!--<p class="list-group-item-text trDestArv"></p>-->
+                       <!--</a>-->
+                       <!--<a href="#" class="list-group-item">-->
+                           <!--<h4 class="list-group-item-heading">Arrival TIme</h4>-->
+                           <!--<p class="list-group-item-text trNxtArv"></p>-->
+                       <!--</a>-->
+                   <!--</div>-->
+      </div>     <!--  END RIGHTHAND 7 COLUMNS  -->
+    </div>       <!--  END ROW  -->
+</div>     <!--  END CONTENT DIV  -->
+</body>
+
+
+   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>-->
+
+   <script href="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+   <script href="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+   <script href="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+   <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCMZUFTpgo1PUPvy-g9oUOC8M1arhrKc78",
+            authDomain: "wk7traintime.firebaseapp.com",
+            databaseURL: "https://wk7traintime.firebaseio.com",
+            projectId: "wk7traintime",
+            storageBucket: "wk7traintime.appspot.com",
+            messagingSenderId: "804847268044"
+        };
+        firebase.initializeApp(config);
+        // var Schedulesdb = firebase.database().ref();
+   </script>
+
+   <script src="assets/js/traintime.js"></script>
+
+</html>
